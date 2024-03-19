@@ -50,6 +50,6 @@ Before running the project, make sure you have the following installed:
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
-## License
+## Credit
 
-This project is licensed under the [MIT License](LICENSE).
+This project is part of a tutorial course by [The Code Dealer](https://www.youtube.com/@TheCodeDealer) on [youtube](https://www.youtube.com/watch?v=kPKXmEp_wfU).

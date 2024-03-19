@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: #fff;
+        --foreground: #f9f9f9;
+
+        --text-muted: #6c7983;
+
+        --active-link: rgba(230, 230, 230, 0.87);
+        --active-link-hover: #c5c5c5;
+    }
+
+    .dark {
+        --background: #181818;
+        --foreground: #212121;
+
+        --active-link: rgba(249, 249, 249, 0.08);
+        --active-link-hover: rgba(249, 249, 249, 0.03);
+    }
+
+    body {
+        font-size: 16px;
+    }
+}
+
+@layer base {
+    body {
+        @apply bg-background;
+    }
+    .main {
+        @apply p-10 flex gap-10 h-full transition-all duration-300 ease-in-out;
+    }
+    .nav {
+        @apply flex flex-col justify-between relative w-[18rem] bg-[#f9f9f9] dark:bg-[#212121] rounded-2xl border-2 border-border text-muted;
+    }
+    @media screen and (max-width: 768px) {
+        .main {
+            @apply p-4 gap-4;
+        }
+        .nav {
+            @apply fixed h-sidebar top-0 left-0 z-50 transition-all duration-300 ease-profile;
+        }
+    }
+    @media screen and (max-width: 450px) {
+        .modal-font {
+            font-size: 90%;
+        }
+    }
+    .modal-heading {
+        font-size: clamp(1.2rem, 5vw, 1.6rem);
+    }
+    .tasks-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+    .sidebar-grid {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+}

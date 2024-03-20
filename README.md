@@ -21,7 +21,7 @@ Before running the project, make sure you have the following installed:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/taskflow.git
+    git clone https://github.com/SNKYNinja/Task-Flow.git
     ```
 
 2. Install the dependencies:

@@ -2,7 +2,6 @@
 
 import GlobalProvider from "@/context/globalProvider";
 import React, { useEffect, useState } from "react";
-import { zoomies } from "ldrs";
 import Loader from "@/components/loader";
 
 export default function ContextProvider({
@@ -11,8 +10,6 @@ export default function ContextProvider({
     children: React.ReactNode;
 }) {
     const [isReady, setIsReady] = useState(false);
-
-    zoomies.register();
 
     useEffect(() => {
         setTimeout(() => {

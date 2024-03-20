@@ -1,7 +1,14 @@
-import { zoomies } from "ldrs";
+"use client";
+
+import { useEffect } from "react";
 
 export default function Loader() {
-    zoomies.register();
+    useEffect(() => {
+        (async () => {
+            const { zoomies } = await import("ldrs");
+            zoomies.register();
+        })();
+    }, []);
     return (
         <l-zoomies
             size="300"
